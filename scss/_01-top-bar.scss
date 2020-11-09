@@ -1,0 +1,80 @@
+.top-bar {
+	background: $black;
+	filter: drop-shadow(-10px 0 10px rgba(0, 0, 0, 0.1));
+	left: 0;
+	padding: 0 $margin-side-m;
+	@include tablet-and-landscape {
+		padding: 0 $margin-side-t;
+	}
+	position: sticky;
+	top: 0;
+	width: 100%;
+	@include desktop {
+		height: auto;
+		background: none;
+		position: absolute;
+		padding: 20px 0;
+	}
+
+	&__container {
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include desktop {
+			padding: 20px 0;
+			margin: 0 $margin-side-d;
+		}
+	}
+
+	&__logo-link {
+		flex-shrink: 0;
+	}
+
+	%lines {
+		background: $white;
+		width: 35px;
+		height: 3px;
+		border-radius: 2px;
+		display: block;
+		@include desktop {
+			display: none;
+		}
+	}
+
+	&__hamburger {
+		@extend %lines;
+		position: relative;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			@extend %lines;
+		}
+		&::before {
+			top: -8px;
+		}
+		&::after {
+			top: 8px;
+		}
+	}
+
+	&__checkbox {
+		cursor: pointer;
+		opacity: 0;
+		position: absolute;
+		right: 30px;
+		@include tablet-and-landscape {
+			right: 70px;
+		}
+		top: 15px;
+		transform: scaleX(3) scaleY(2);
+	}
+
+	&__btn {
+		display: none;
+		@include desktop {
+			display: initial;
+		}
+	}
+}

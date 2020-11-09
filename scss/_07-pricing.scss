@@ -1,0 +1,92 @@
+.pricing {
+	width: 100%;
+	margin-bottom: $margin-bottom-m;
+	@include tablet-and-landscape {
+		margin-bottom: $margin-bottom-t;
+	}
+	@include desktop {
+		padding: 0 $margin-side-d;
+		margin-bottom: $margin-bottom-d;
+	}
+
+	&__container {
+		@include desktop {
+			margin: 0 auto;
+		}
+	}
+
+	&__desc {
+		margin-bottom: 30px;
+		@include tablet-and-landscape {
+			margin-bottom: 50px;
+		}
+		@include desktop {
+			margin-bottom: 70px;
+		}
+	}
+
+	&__headline {
+		margin-bottom: 15px;
+		@include tablet-and-landscape {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__boxes {
+		display: flex;
+		flex-wrap: wrap;
+		@include tablet-and-landscape {
+			flex-wrap: nowrap;
+		}
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__box {
+		box-shadow: 0 5px 30px rgba($color: #333, $alpha: 0.1);
+		margin-bottom: 20px;
+		width: max(200px, 300px);
+	}
+
+	&__plan {
+		padding: 15px 10px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		&--primary {
+			background: lighten($primary, 45%);
+		}
+		&--warm {
+			background: lighten($sec-warm, 45%);
+		}
+		&--cold {
+			background: lighten($sec-cold, 40%);
+		}
+	}
+
+	&__price {
+		&--primary {
+			color: $primary;
+		}
+		&--warm {
+			color: $sec-warm;
+		}
+		&--cold {
+			color: darken($sec-cold, 20%);
+		}
+	}
+
+	&__items {
+		padding: 20px;
+	}
+
+	&__item {
+		margin-bottom: 20px;
+		color: $grey;
+	}
+
+	&__btn {
+		margin-bottom: 20px;
+	}
+}

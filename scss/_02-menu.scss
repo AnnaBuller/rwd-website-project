@@ -1,0 +1,122 @@
+.menu {
+	background: linear-gradient(
+		270deg,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 0.9) 100%
+	);
+	display: none;
+	height: 100vh;
+	left: 0;
+	padding: 20px $margin-side-m;
+	@include tablet-and-landscape {
+		clip-path: ellipse(32% 82% at 80% 30%);
+		padding: 20px $margin-side-t;
+	}
+	@include landscape-mode {
+		clip-path: none;
+	}
+	position: absolute;
+	right: 0;
+	text-align: right;
+	top: 100%;
+
+	@include desktop {
+		background: transparent;
+		box-shadow: none;
+		clip-path: none;
+		display: initial;
+		height: auto;
+		position: initial;
+	}
+
+	&__items {
+		@include landscape-mode {
+			display: grid;
+			grid-template-columns: repeat(3, auto);
+		}
+		@include desktop {
+			display: flex;
+			align-items: center;
+			margin: 0 auto;
+			width: min-content;
+		}
+	}
+
+	&__item {
+		color: $black;
+		font-size: 1.5rem;
+		padding: 3px 0;
+		@include landscape-mode {
+			border-right: solid 1px $grey;
+			padding: 0px 20px;
+		}
+		@include desktop {
+			border-right: none;
+			color: $white;
+			cursor: pointer;
+			font-size: 1.2rem;
+			margin-left: 20px;
+			position: relative;
+			padding: 10px;
+		}
+	}
+
+	&__link, &__link--dropdown {
+			padding: 10px;
+			border-radius: 30px;			
+	}
+	
+
+	&__link--dropdown {
+		@include desktop {
+			align-items: center;
+			display: flex;
+			position: relative;
+			&::after {
+				border-style: solid;
+				border-width: 0 3px 3px 0;
+				color: inherit;
+				content: '';
+				margin-left: 7px;
+				padding: 3px;
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+	&__drop-box {
+		font-size: 1.2rem;
+		margin-right: 20px;
+		padding: 5px 0;
+		@include desktop {
+			background: darken($primary, 5%);
+			border-radius: 40px;
+			display: none;
+			left: calc(-110px + 50%);
+			line-height: 2;
+			margin: 0;
+			padding: 15px 0;
+			position: absolute;
+			text-align: center;
+			top: 100%;
+			width: 230px;
+		}
+	}
+}
+
+.top-bar__checkbox:checked ~ .menu {
+	display: block;
+}
+
+.top-bar__checkbox:checked ~ .top-bar__hamburger::before,
+.top-bar__checkbox:checked ~ .top-bar__hamburger::after {
+	visibility: hidden;
+}
+
+.menu__link:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+.menu__dropdown:hover > .menu__drop-box {
+	display: block;
+}
+

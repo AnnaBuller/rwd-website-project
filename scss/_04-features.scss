@@ -1,0 +1,77 @@
+@import 'media-mixins';
+
+.features {
+	margin-bottom: $margin-bottom-m;
+	@include tablet-and-landscape {
+		margin-bottom: $margin-bottom-t;
+	}
+	@include desktop {
+		margin-bottom: $margin-bottom-d;
+	}
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: flex-start;
+		@include tablet-and-landscape {
+			flex-wrap: no-wrap;
+		}
+		@include desktop {
+			margin: 0 $margin-side-d;
+		}
+	}
+
+	&__box {
+		margin-bottom: 40px;
+		max-width: 60%;
+
+		@include tablet-and-landscape {
+			width: 30%;
+		}
+	}
+
+	&__icon {
+		border-radius: 20px;
+		margin-bottom: 10px;
+		padding: 27px;
+		@include desktop {
+			margin-bottom: 30px;
+		}
+
+		&--primary-col {
+			background: linear-gradient(
+				323deg,
+				rgba(3, 130, 245, 1) 0%,
+				rgba(0, 85, 162, 1) 100%
+			);
+		}
+		&--warm {
+			background: linear-gradient(
+				90deg,
+				rgba(255, 153, 0, 1) 0%,
+				rgba(238, 105, 2, 1) 100%
+			);
+		}
+		&--cold {
+			background: linear-gradient(
+				229deg,
+				rgba(55, 235, 237, 1) 0%,
+				rgb(28, 186, 189) 100%
+			);
+		}
+	}
+
+	&__desc {
+		font-size: 1.2rem;
+	@include tablet-and-landscape {
+		font-size: 1.3rem;
+	}
+	@include desktop{
+		font-size: 1.4rem;
+	}
+	@supports (font-size: clamp(1.2rem, 2vw, 1.4rem)) {
+		font-size: clamp(1.2rem, 2vw, 1.4rem);
+	}
+	}
+}

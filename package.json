@@ -1,0 +1,23 @@
+{
+  "name": "task-html-and-css-rwd",
+  "version": "1.0.0",
+  "description": "Najwyższy czas zakodować stronę, która ma przygotowane 3 widoki dla różnych punktów granicznych (ang. breakpoints):",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaBuller/task-html-and-css-rwd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnaBuller/task-html-and-css-rwd/issues"
+  },
+  "homepage": "https://github.com/AnnaBuller/task-html-and-css-rwd#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

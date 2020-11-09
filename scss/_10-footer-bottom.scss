@@ -1,0 +1,21 @@
+.footer-bot {
+	background: $black;
+	color: $white;
+	text-align: center;
+	padding: 25px $margin-side-m;
+	@include tablet-and-landscape {
+		padding: 40px $margin-side-t;
+	}
+	@include desktop {
+		padding: 45px $margin-side-d;
+	}
+
+	&__copy {
+		line-height: 2;
+		@extend %small-text;
+	}
+
+	&__link {
+		color: $primary;
+	}
+}

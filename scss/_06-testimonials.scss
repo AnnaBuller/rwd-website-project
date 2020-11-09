@@ -1,0 +1,33 @@
+.testim {
+	background: linear-gradient(rgba(97, 179, 255, 0.9), rgba(97, 179, 255, 0.9)),
+		url(../images/banner/testmonial.png) no-repeat center center/cover;
+	color: $white;
+	text-align: center;
+	padding: 80px $margin-side-m;
+	margin-bottom: $margin-bottom-m;
+	@include tablet-and-landscape {
+		padding: 80px $margin-side-t;
+		margin-bottom: $margin-bottom-t;
+	}
+	@include desktop {
+		padding: 140px $margin-side-d;
+		margin-bottom: $margin-bottom-d;
+	}
+
+	&__container {
+		margin: 0 auto;
+		max-width: $max-width;
+	}
+
+	&__rating {
+		margin-top: 25px;
+	}
+
+	&__star {
+		color: rgb(255, 218, 55);
+	}
+
+	&__author {
+		display: inline-block;
+	}
+}

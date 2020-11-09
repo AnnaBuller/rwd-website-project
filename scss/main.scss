@@ -1,0 +1,21 @@
+@import 'reset';
+@import 'utilities';
+@import 'variables';
+* {
+	font-family: 'Poppins', sans-serif;
+}
+
+@import '01-top-bar';
+@import '02-menu';
+@import '03-hero';
+@import '04-features';
+@import '05-product';
+@import '06-testimonials';
+@import '07-pricing';
+@import '08-download';
+@import '09-footer-upper';
+@import '10-footer-bottom';
+
+html {
+	-webkit-text-size-adjust: 100%;
+}

@@ -1,0 +1,86 @@
+.footer-up {
+	background: $grey;
+	color: $white;
+	padding: 30px $margin-side-m;
+	@include tablet-and-landscape {
+		padding: 60px $margin-side-t;
+	}
+	@include desktop {
+		padding: 60px $margin-side-d;
+	}
+
+	&__container {
+		display: grid;
+		gap: 30px;
+		@include tablet-and-landscape {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include desktop {
+			grid-template-columns: 2fr repeat(3, 1fr);
+		}
+		margin: 0 auto;
+		max-width: $max-width;
+	}
+
+	&__headline {
+		font-size: 1.3rem;
+	@include tablet-and-landscape {
+		font-size: 1.5rem;
+	}
+	@include desktop{
+		font-size: 1.7rem;
+	}
+	@supports (font-size: clamp(1.3rem, 2vw, 1.7rem)) {
+		font-size: clamp(1.3rem, 2vw, 1.7rem);
+	}
+		margin-bottom: 10px;
+	}
+
+	&__link {
+		@extend %small-text;
+		line-height: 2.8;
+	}
+}
+
+.social {
+	&__headline {
+		font-size: 1.3rem;
+	@include tablet-and-landscape {
+		font-size: 1.5rem;
+	}
+	@include desktop{
+		font-size: 1.7rem;
+	}
+	@supports (font-size: clamp(1.3rem, 1.8vw, 1.7rem)) {
+		font-size: clamp(1.3rem, 1.8vw, 1.7rem);
+	}
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+	&__desc {
+		@extend %small-text;
+		margin-bottom: 20px;
+		@include tablet-and-landscape {
+			margin-bottom: 50px;
+		}
+	}
+
+	&__icons {
+		display: flex;
+	}
+	&__item {
+		text-align: center;
+		width: 40px;
+		height: 40px;
+		background: lighten($grey, 20%);
+		padding: 10px;
+		border-radius: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 10px;
+	}
+	&__icon {
+		color: $grey-light;
+	}
+}

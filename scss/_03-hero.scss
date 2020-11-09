@@ -1,0 +1,56 @@
+.hero {
+	background: url(../images/banner/banner-small.png) no-repeat center -40px / cover;
+	color: $white;
+	margin-bottom: $margin-bottom-m;
+	padding: 30px $margin-side-m 0;
+	width: 100%;
+	@include tablet-and-landscape {
+		background-size: 100% 100%;
+		padding: 100px $margin-side-t 0;
+		margin-bottom: $margin-bottom-t;
+	}
+	@include desktop {
+		padding: 150px $margin-side-d 0;
+		margin-bottom: $margin-bottom-d;
+	}
+
+	&__container {
+		max-width: $max-width;
+		@include tablet-and-landscape {
+			margin: 0 auto;
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+		@include desktop {
+			align-items: center;
+			margin: 0 auto;
+		}
+	}
+
+	&__desc {
+		margin-bottom: 60px;
+		@include tablet-and-landscape {
+			max-width: 50%;
+		}
+		@include desktop {
+			margin-top: -100px;
+		}
+	}
+
+	&__headline {
+		margin-bottom: 20px;
+	}
+
+	&__subheadline {
+		margin-bottom: 30px;
+	}
+
+	&__img {
+		display: block;
+		margin: 0 auto;
+		@include tablet-and-landscape {
+			max-width: 50%;
+		}
+	}
+}

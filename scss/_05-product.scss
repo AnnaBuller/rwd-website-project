@@ -1,0 +1,38 @@
+.product {
+	margin-bottom: $margin-bottom-m;
+	text-align: left;
+	@include tablet-and-landscape {
+		margin-bottom: $margin-bottom-t;
+	}
+	@include desktop {
+		margin-bottom: $margin-bottom-d;
+		padding: 0 $margin-side-d;
+	}
+
+	&__container {
+		@include tablet-and-landscape {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			margin: 0 auto;
+		}
+	}
+
+	&__text {
+		@include tablet-and-landscape {
+			max-width: 50%;
+		}
+	}
+
+	&__headline,
+	&__desc,
+	&__btn {
+		margin-bottom: 30px;
+	}
+
+	&__img {
+		@include tablet-and-landscape {
+			max-width: 50%;
+		}
+	}
+}
