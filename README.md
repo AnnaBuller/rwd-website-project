@@ -1,4 +1,4 @@
-![Alt Text](./assets/screen.png)
+![a screenshot presenting the front page of the project website](./assets/screen.png)
 
 # RWD Website Project
 
