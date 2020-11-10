@@ -1,3 +1,5 @@
+![Alt Text](./assets/screen.png)
+
 # RWD Website Project
 
 RWD Website is a responsive landing page modeled after [Colorlib free Applab template](https://colorlib.com/wp/template/applab/). 
